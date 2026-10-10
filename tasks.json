@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:09:27Z",
+  "updatedAt": "2026-10-10T12:27:43.222Z",
   "tasks": [],
-  "lists": [],
+  "lists": [
+    {
+      "id": "inbox",
+      "name": "收集箱",
+      "icon": "inbox",
+      "sortOrder": 0
+    }
+  ],
   "repeatRules": []
 }
