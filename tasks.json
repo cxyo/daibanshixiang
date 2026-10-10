@@ -1,7 +1,27 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:28:26.862Z",
-  "tasks": [],
+  "updatedAt": "2026-10-10T12:29:30.259Z",
+  "tasks": [
+    {
+      "id": "e668af1f-08b6-4139-bf9c-ac0c7294ef92",
+      "title": "科世科报账",
+      "description": "",
+      "status": "active",
+      "priority": 3,
+      "importance": true,
+      "urgency": true,
+      "listId": "inbox",
+      "dueDate": null,
+      "reminderDate": null,
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": true,
+      "completedAt": null,
+      "createdAt": "2026-10-10T12:29:28.750Z",
+      "updatedAt": "2026-10-10T12:29:28.750Z",
+      "sortOrder": 1791635368750
+    }
+  ],
   "lists": [
     {
       "id": "inbox",
