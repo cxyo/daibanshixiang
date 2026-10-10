@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:43:14.096Z",
+  "updatedAt": "2026-10-10T15:02:06.840Z",
   "tasks": [
+    {
+      "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
+      "title": "开发进销存管理网站",
+      "description": "",
+      "status": "active",
+      "priority": 0,
+      "importance": true,
+      "urgency": true,
+      "listId": "inbox",
+      "dueDate": null,
+      "reminderDate": null,
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": true,
+      "completedAt": null,
+      "createdAt": "2026-10-10T15:02:05.294Z",
+      "updatedAt": "2026-10-10T15:02:05.294Z",
+      "sortOrder": 1791644525294
+    },
     {
       "id": "bb388c68-d08a-4ae8-8e90-709ea5b3cd25",
       "title": "寮步联技报账",
