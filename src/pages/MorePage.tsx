@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import {
   Bell,
+  Cloud,
   Download,
   Grid2X2,
   ListTodo,
@@ -11,13 +12,40 @@ import {
 import { db } from '../db/database';
 import { useTaskStore } from '../store/useTaskStore';
 import { requestNotificationPermission } from '../lib/notify';
+import { getToken } from '../lib/sync';
+
+function formatTime(iso: string | null): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleString('zh-CN', {
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+}
 
 export default function MorePage() {
-  const { addList, updateList, deleteList, exportData, importData } = useTaskStore();
+  const {
+    addList,
+    updateList,
+    deleteList,
+    exportData,
+    importData,
+    syncEnabled,
+    syncing,
+    lastSyncAt,
+    syncError,
+    configureSync,
+    disconnectSync,
+    manualSync,
+  } = useTaskStore();
   const lists = useLiveQuery(() => db.lists.toArray(), []);
   const [newListName, setNewListName] = useState('');
   const [editingListId, setEditingListId] = useState<string | null>(null);
   const [editingName, setEditingName] = useState('');
+  const [tokenInput, setTokenInput] = useState(getToken());
+  const [savingSync, setSavingSync] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleExport = async () => {
@@ -56,6 +84,15 @@ export default function MorePage() {
     setEditingListId(null);
   };
 
+  const handleSaveSync = async () => {
+    setSavingSync(true);
+    try {
+      await configureSync(tokenInput);
+    } finally {
+      setSavingSync(false);
+    }
+  };
+
   return (
     <div className="h-full flex flex-col">
       <header className="px-4 py-3 md:px-6 md:py-4 bg-[var(--color-bg)]">
@@ -63,6 +100,69 @@ export default function MorePage() {
       </header>
 
       <div className="flex-1 px-4 pb-24 md:pb-6 md:px-6 overflow-y-auto space-y-4">
+        <section className="bg-white rounded-2xl border border-[var(--color-border)] p-4 space-y-3">
+          <div className="flex items-center space-x-3">
+            <Cloud className="w-5 h-5 text-primary" />
+            <span className="text-sm font-medium">云端同步（多设备共享）</span>
+          </div>
+
+          {syncEnabled ? (
+            <div className="space-y-2">
+              <div className="text-xs text-gray-500">
+                {syncing ? (
+                  <span>同步中…</span>
+                ) : lastSyncAt ? (
+                  <span>已同步 {formatTime(lastSyncAt)}</span>
+                ) : (
+                  <span>已连接</span>
+                )}
+                {syncError && <span className="text-red-500 ml-2">{syncError}</span>}
+              </div>
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => void manualSync()}
+                  className="px-3 py-2 text-sm text-white bg-primary rounded-lg hover:bg-primary-dark"
+                >
+                  立即同步
+                </button>
+                <button
+                  onClick={disconnectSync}
+                  className="px-3 py-2 text-sm text-gray-600 border border-[var(--color-border)] rounded-lg hover:bg-gray-50"
+                >
+                  断开连接
+                </button>
+              </div>
+              <p className="text-xs text-gray-400">
+                数据已存到 GitHub 仓库（data 分支 tasks.json），每 5 秒自动拉取更新。
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              <p className="text-xs text-gray-500">
+                输入一个仅限本仓库读写权限的 GitHub 令牌，即可在电脑/手机间实时共享待办数据。
+              </p>
+              <input
+                type="password"
+                value={tokenInput}
+                onChange={(e) => setTokenInput(e.target.value)}
+                placeholder="粘贴 GitHub 令牌（ghp_ 或 github_pat_ 开头）"
+                className="w-full text-sm border border-[var(--color-border)] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/20"
+              />
+              <button
+                onClick={() => void handleSaveSync()}
+                disabled={savingSync}
+                className="w-full px-3 py-2 text-sm text-white bg-primary rounded-lg hover:bg-primary-dark disabled:opacity-50"
+              >
+                {savingSync ? '连接中…' : '保存并同步'}
+              </button>
+              {syncError && <p className="text-xs text-red-500">{syncError}</p>}
+              <p className="text-xs text-gray-400">
+                令牌仅保存在本浏览器本地，不上传除 GitHub 之外的任何地方。
+              </p>
+            </div>
+          )}
+        </section>
+
         <section className="bg-white rounded-2xl border border-[var(--color-border)] overflow-hidden">
           <button
             onClick={() => requestNotificationPermission()}
@@ -196,7 +296,7 @@ export default function MorePage() {
         </section>
 
         <p className="text-xs text-gray-400 text-center px-4">
-          数据保存在浏览器本地（IndexedDB），清除浏览器数据会丢失，建议定期导出备份。
+          数据同时保存在浏览器本地（IndexedDB）与云端（GitHub）。云端同步开启时，多设备实时共享；关闭后仅本地保存。
         </p>
       </div>
     </div>
