@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T12:35:09.133Z",
+  "updatedAt": "2026-10-10T12:43:14.096Z",
   "tasks": [
     {
       "id": "bb388c68-d08a-4ae8-8e90-709ea5b3cd25",
@@ -20,6 +20,25 @@
       "createdAt": "2026-10-10T12:35:07.623Z",
       "updatedAt": "2026-10-10T12:35:07.623Z",
       "sortOrder": 1791635707623
+    },
+    {
+      "id": "d8deff0d-9261-4d7e-bf26-f461da43e42a",
+      "title": "整理机器人资料",
+      "description": "按照项目整理",
+      "status": "active",
+      "priority": 3,
+      "importance": true,
+      "urgency": true,
+      "listId": "inbox",
+      "dueDate": null,
+      "reminderDate": null,
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": true,
+      "completedAt": null,
+      "createdAt": "2026-10-10T12:43:12.568Z",
+      "updatedAt": "2026-10-10T12:43:12.568Z",
+      "sortOrder": 1791636192568
     },
     {
       "id": "e668af1f-08b6-4139-bf9c-ac0c7294ef92",
