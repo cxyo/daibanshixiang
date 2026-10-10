@@ -31,7 +31,7 @@
 
 ```bash
 # 进入项目目录
-cd todo-app
+cd daibanshixiang
 
 # 安装依赖
 npm install
@@ -66,7 +66,7 @@ npm run build
 ## 项目结构
 
 ```
-todo-app/
+daibanshixiang/
 ├── public/              # 静态资源与 PWA 图标
 ├── src/
 │   ├── components/      # 页面组件
