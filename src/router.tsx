@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import App from './App';
 import InboxPage from './pages/InboxPage';
 import CalendarPage from './pages/CalendarPage';
@@ -7,7 +7,7 @@ import SearchPage from './pages/SearchPage';
 import MorePage from './pages/MorePage';
 import QuadrantPage from './pages/QuadrantPage';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: <App />,
