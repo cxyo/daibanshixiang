@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:30:41.680Z",
+  "updatedAt": "2026-10-11T23:31:44.137Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -206,6 +206,17 @@
       "status": "idea",
       "createdAt": "2026-10-11T23:28:09.678Z",
       "updatedAt": "2026-10-11T23:28:09.678Z"
+    },
+    {
+      "id": "4f957d4f-d88a-432e-b4eb-a6da5c09303a",
+      "content": "小孩可以考以下证书\n律师资格证\n营养师\n证券从业资格证\n\n\n语文作文就看杨奇函\n数学就看",
+      "tags": [
+        "少儿教育"
+      ],
+      "pinned": false,
+      "status": "idea",
+      "createdAt": "2026-10-11T23:31:42.573Z",
+      "updatedAt": "2026-10-11T23:31:42.573Z"
     },
     {
       "id": "84187b7a-3716-4e58-a0e3-5a4e3d1ff5ef",
