@@ -1,4 +1,4 @@
-import type { List, RepeatRule, Task } from '../types';
+import type { List, Memo, RepeatRule, Task } from '../types';
 
 const OWNER = 'cxyo';
 const REPO = 'daibanshixiang';
@@ -12,6 +12,7 @@ export interface SyncSnapshot {
   tasks: Task[];
   lists: List[];
   repeatRules: RepeatRule[];
+  memos: Memo[];
 }
 
 export function getToken(): string {

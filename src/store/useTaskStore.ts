@@ -46,7 +46,7 @@ interface TaskState {
 
 let pushTimer: ReturnType<typeof setTimeout> | null = null;
 
-function schedulePush() {
+export function schedulePush() {
   if (!hasToken()) return;
   if (pushTimer) clearTimeout(pushTimer);
   pushTimer = setTimeout(() => {
@@ -58,23 +58,27 @@ async function exportLocal(): Promise<SyncSnapshot> {
   const tasks = await db.tasks.toArray();
   const lists = await db.lists.toArray();
   const repeatRules = await db.repeatRules.toArray();
+  const memos = await db.memos.toArray();
   return {
-    version: 1,
+    version: 2,
     updatedAt: new Date().toISOString(),
     tasks,
     lists,
     repeatRules,
+    memos,
   };
 }
 
 async function importToLocal(snap: SyncSnapshot) {
-  await db.transaction('rw', db.tasks, db.lists, db.repeatRules, async () => {
+  await db.transaction('rw', db.tasks, db.lists, db.repeatRules, db.memos, async () => {
     await db.tasks.clear();
     await db.lists.clear();
     await db.repeatRules.clear();
+    await db.memos.clear();
     if (snap.tasks?.length) await db.tasks.bulkAdd(snap.tasks);
     if (snap.lists?.length) await db.lists.bulkAdd(snap.lists);
     if (snap.repeatRules?.length) await db.repeatRules.bulkAdd(snap.repeatRules);
+    if (snap.memos?.length) await db.memos.bulkAdd(snap.memos);
     if (!snap.lists?.some((l) => l.id === 'inbox')) {
       await db.lists.add({ id: 'inbox', name: '收集箱', icon: 'inbox', sortOrder: 0 });
     }
@@ -228,18 +232,21 @@ export const useTaskStore = create<TaskState>((set, get) => ({
     const tasks = await db.tasks.toArray();
     const lists = await db.lists.toArray();
     const repeatRules = await db.repeatRules.toArray();
-    return JSON.stringify({ tasks, lists, repeatRules, version: 1 }, null, 2);
+    const memos = await db.memos.toArray();
+    return JSON.stringify({ tasks, lists, repeatRules, memos, version: 2 }, null, 2);
   },
 
   importData: async (json) => {
     const data = JSON.parse(json);
-    await db.transaction('rw', db.tasks, db.lists, db.repeatRules, async () => {
+    await db.transaction('rw', db.tasks, db.lists, db.repeatRules, db.memos, async () => {
       await db.tasks.clear();
       await db.lists.clear();
       await db.repeatRules.clear();
+      await db.memos.clear();
       if (data.tasks?.length) await db.tasks.bulkAdd(data.tasks);
       if (data.lists?.length) await db.lists.bulkAdd(data.lists);
       if (data.repeatRules?.length) await db.repeatRules.bulkAdd(data.repeatRules);
+      if (data.memos?.length) await db.memos.bulkAdd(data.memos);
     });
     schedulePush();
   },

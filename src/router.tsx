@@ -6,6 +6,7 @@ import ImportantPage from './pages/ImportantPage';
 import SearchPage from './pages/SearchPage';
 import MorePage from './pages/MorePage';
 import QuadrantPage from './pages/QuadrantPage';
+import MemoPage from './pages/MemoPage';
 
 export const router = createHashRouter([
   {
@@ -18,6 +19,7 @@ export const router = createHashRouter([
       { path: 'search', element: <SearchPage /> },
       { path: 'more', element: <MorePage /> },
       { path: 'quadrant', element: <QuadrantPage /> },
+      { path: 'memo', element: <MemoPage /> },
     ],
   },
 ]);

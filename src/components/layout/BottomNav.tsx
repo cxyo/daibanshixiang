@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import {
   CalendarDays,
   CheckCircle2,
+  Lightbulb,
   MoreHorizontal,
   Search,
 } from 'lucide-react';
@@ -10,6 +11,7 @@ const navItems = [
   { to: '/', icon: CheckCircle2, label: '待办' },
   { to: '/calendar', icon: CalendarDays, label: '日历' },
   { to: '/important', icon: () => <span className="text-lg">★</span>, label: '重要' },
+  { to: '/memo', icon: Lightbulb, label: '备忘' },
   { to: '/search', icon: Search, label: '搜索' },
   { to: '/more', icon: MoreHorizontal, label: '更多' },
 ];

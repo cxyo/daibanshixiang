@@ -50,6 +50,18 @@ export interface List {
   sortOrder: number;
 }
 
+export type MemoStatus = 'idea' | 'doing' | 'done' | 'archived';
+
+export interface Memo {
+  id: string;
+  content: string;
+  tags: string[];
+  pinned: boolean;
+  status: MemoStatus;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export type QuadrantKey = 'Q1' | 'Q2' | 'Q3' | 'Q4';
 
 export interface QuadrantConfig {
