@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T15:02:06.840Z",
+  "updatedAt": "2026-10-11T13:24:16.569Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -58,6 +58,25 @@
       "createdAt": "2026-10-10T12:43:12.568Z",
       "updatedAt": "2026-10-10T12:43:12.568Z",
       "sortOrder": 1791636192568
+    },
+    {
+      "id": "dff658b6-60ec-4860-942f-645bb9e652a1",
+      "title": "报账赶紧",
+      "description": "10.12无论如何先把报账完成",
+      "status": "active",
+      "priority": 3,
+      "importance": true,
+      "urgency": true,
+      "listId": "inbox",
+      "dueDate": "2026-10-12T10:00:00.000Z",
+      "reminderDate": "2026-10-12T09:30:00.000Z",
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": true,
+      "completedAt": null,
+      "createdAt": "2026-10-11T13:24:15.024Z",
+      "updatedAt": "2026-10-11T13:24:15.024Z",
+      "sortOrder": 1791725055024
     },
     {
       "id": "e668af1f-08b6-4139-bf9c-ac0c7294ef92",
