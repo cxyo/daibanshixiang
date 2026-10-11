@@ -1,24 +1,24 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:09:02.854Z",
+  "updatedAt": "2026-10-11T23:10:42.911Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
       "title": "开发进销存管理网站",
-      "description": "",
+      "description": "完成",
       "status": "active",
       "priority": 0,
       "importance": true,
-      "urgency": true,
+      "urgency": false,
       "listId": "inbox",
       "dueDate": null,
       "reminderDate": null,
       "repeatRuleId": null,
       "tags": [],
-      "pinned": true,
+      "pinned": false,
       "completedAt": null,
       "createdAt": "2026-10-10T15:02:05.294Z",
-      "updatedAt": "2026-10-10T15:02:05.294Z",
+      "updatedAt": "2026-10-11T23:10:41.359Z",
       "sortOrder": 1791644525294
     },
     {
