@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:24:36.514Z",
+  "updatedAt": "2026-10-11T23:25:37.138Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -165,6 +165,17 @@
       "status": "idea",
       "createdAt": "2026-10-11T23:20:18.563Z",
       "updatedAt": "2026-10-11T23:20:18.563Z"
+    },
+    {
+      "id": "84187b7a-3716-4e58-a0e3-5a4e3d1ff5ef",
+      "content": "AI工具：\nkimi已经不只是聊天工具，而是一套Agent产品矩阵\n\ndeepseek harness\nworkbuddy的价值，在于更贴近国内办公现场\ncodex的核心不是写代码，而是完成工程闭环\nclaude不能笼统叫一个Agent【推荐】",
+      "tags": [
+        "AI工具"
+      ],
+      "pinned": false,
+      "status": "idea",
+      "createdAt": "2026-10-11T23:25:35.546Z",
+      "updatedAt": "2026-10-11T23:25:35.546Z"
     },
     {
       "id": "96d25caf-09f0-42ad-ab82-aa31024d1df4",
