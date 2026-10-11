@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:25:37.138Z",
+  "updatedAt": "2026-10-11T23:26:52.494Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -39,6 +39,25 @@
       "createdAt": "2026-10-11T23:15:16.750Z",
       "updatedAt": "2026-10-11T23:15:16.750Z",
       "sortOrder": 1791760516750
+    },
+    {
+      "id": "66887bdc-e7a6-488b-b786-2551efe308af",
+      "title": "AI相册",
+      "description": "把小孩子的旅游照片整理成一个相册网站",
+      "status": "active",
+      "priority": 0,
+      "importance": true,
+      "urgency": false,
+      "listId": "inbox",
+      "dueDate": null,
+      "reminderDate": null,
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": false,
+      "completedAt": null,
+      "createdAt": "2026-10-11T23:26:50.952Z",
+      "updatedAt": "2026-10-11T23:26:50.952Z",
+      "sortOrder": 1791761210952
     },
     {
       "id": "bb388c68-d08a-4ae8-8e90-709ea5b3cd25",
