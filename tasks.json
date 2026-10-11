@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:20:20.149Z",
+  "updatedAt": "2026-10-11T23:23:34.492Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -58,6 +58,25 @@
       "createdAt": "2026-10-10T12:35:07.623Z",
       "updatedAt": "2026-10-10T12:35:07.623Z",
       "sortOrder": 1791635707623
+    },
+    {
+      "id": "c3c46a9f-2dbf-4755-9043-3902fdd3bbee",
+      "title": "AI学习",
+      "description": "1等会用手机播放下载的视频，用录音笔录制转文字\n\n2用电脑从第三课开始，做笔记，打卡\n\n3根据这套课整理出来一份完整的抖音做AI提效办公赛道的操作SOP",
+      "status": "active",
+      "priority": 1,
+      "importance": false,
+      "urgency": true,
+      "listId": "inbox",
+      "dueDate": null,
+      "reminderDate": null,
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": false,
+      "completedAt": null,
+      "createdAt": "2026-10-11T23:23:32.937Z",
+      "updatedAt": "2026-10-11T23:23:32.937Z",
+      "sortOrder": 1791761012937
     },
     {
       "id": "d8deff0d-9261-4d7e-bf26-f461da43e42a",
