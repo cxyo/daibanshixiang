@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:10:42.911Z",
+  "updatedAt": "2026-10-11T23:15:18.310Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -20,6 +20,25 @@
       "createdAt": "2026-10-10T15:02:05.294Z",
       "updatedAt": "2026-10-11T23:10:41.359Z",
       "sortOrder": 1791644525294
+    },
+    {
+      "id": "316e9614-3a94-4bca-b737-40dbed6c834a",
+      "title": "笔记整理",
+      "description": "先把所有md文档放到一个目录里，再用搜索找到一个，整理一个，最终全部整理完。比如搜索github，就先整理完gitub的，再整理其他的。",
+      "status": "active",
+      "priority": 2,
+      "importance": true,
+      "urgency": false,
+      "listId": "inbox",
+      "dueDate": null,
+      "reminderDate": null,
+      "repeatRuleId": null,
+      "tags": [],
+      "pinned": false,
+      "completedAt": null,
+      "createdAt": "2026-10-11T23:15:16.750Z",
+      "updatedAt": "2026-10-11T23:15:16.750Z",
+      "sortOrder": 1791760516750
     },
     {
       "id": "bb388c68-d08a-4ae8-8e90-709ea5b3cd25",
