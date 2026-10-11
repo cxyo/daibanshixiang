@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11T23:29:08.510Z",
+  "updatedAt": "2026-10-11T23:30:41.680Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -228,6 +228,17 @@
       "status": "idea",
       "createdAt": "2026-10-11T23:24:34.954Z",
       "updatedAt": "2026-10-11T23:24:34.954Z"
+    },
+    {
+      "id": "ecb1e51b-1631-4ad3-a9fe-497126000116",
+      "content": "deepseek\nchatgpt\n智能体\n扣子\n工作流\nagent\n+AI\n\n国产芯片\n华为芯片\n+芯片\n\n工业机器人\n人形机器人\n宇树机器人\n智元机器人\n+机器人\n\nAI8051U\nESP32\nSTC51\nSTM32\n+单片机\n\n通信ETF\n芯片ETF\n机器人ETF\n人工智能ETF\n科创50ETF\n+涨跌\n!预测",
+      "tags": [
+        "AI消息关键词"
+      ],
+      "pinned": false,
+      "status": "idea",
+      "createdAt": "2026-10-11T23:30:40.122Z",
+      "updatedAt": "2026-10-11T23:30:40.122Z"
     }
   ]
 }
