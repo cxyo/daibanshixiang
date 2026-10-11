@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": "2026-10-11T13:24:16.569Z",
+  "version": 2,
+  "updatedAt": "2026-10-11T23:09:02.854Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -106,5 +106,16 @@
       "sortOrder": 0
     }
   ],
-  "repeatRules": []
+  "repeatRules": [],
+  "memos": [
+    {
+      "id": "07b46945-b9e7-4412-9b7e-8ba1b073f3ac",
+      "content": "机器人项目整理：\n1.发那科的在里面机器人里，记得拷贝，缺操作文档\n2.安川的在外面机器人里，记得拷贝\n3.联技的记得拷贝",
+      "tags": [],
+      "pinned": false,
+      "status": "idea",
+      "createdAt": "2026-10-11T23:09:01.277Z",
+      "updatedAt": "2026-10-11T23:09:01.277Z"
+    }
+  ]
 }
