@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-12T23:53:06.198Z",
+  "updatedAt": "2026-10-13T12:11:28.423Z",
   "tasks": [
     {
       "id": "248ca27a-aab9-45ff-9b66-a549399e75ef",
@@ -225,9 +225,9 @@
         "基金量化"
       ],
       "pinned": false,
-      "status": "idea",
+      "status": "doing",
       "createdAt": "2026-10-11T23:32:41.471Z",
-      "updatedAt": "2026-10-11T23:32:41.471Z"
+      "updatedAt": "2026-10-13T12:11:26.859Z"
     },
     {
       "id": "84187b7a-3716-4e58-a0e3-5a4e3d1ff5ef",
